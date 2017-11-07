@@ -1,0 +1,42 @@
+
+ages = [43,65,34,63,13,78,64,26,9,4]
+for index in range(9,-1,-1):
+    print(ages[index])
+for j in range(0,8):
+
+    for i in range(0,9):
+        if ages[i]  > ages[i+1]:
+            temp= ages[i]
+            ages[i] = ages[i+1]
+            ages[i + 1] = temp
+
+for index in range(0,10,1):
+    print(ages[index])
+
+
+
+
+
+#ages = [range(11)]
+for index in range (0,10)
+    temp = int(input("enter age")
+               if: temp<0
+               print("not possible")
+               else if: temp>99
+               print("too old")
+               ages.append(temp)
+
+for index in range(9,-1,-1):
+    print(ages[index])
+for j in range(0,8):
+
+
+
+    for i in range(0,9):
+        if ages[i]  > ages[i+1]:
+            temp= ages[i]
+            ages[i] = ages[i+1]
+            ages[i + 1] = temp
+
+for index in range(0,10,1):
+    print(ages[index])
