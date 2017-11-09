@@ -40,3 +40,123 @@ for j in range(0,8):
 
 for index in range(0,10,1):
     print(ages[index])
+    
+    
+    
+    
+    
+    
+    from sense_hat import SenseHat
+import time
+
+s = SenseHat()
+s.low_light = False
+
+green = (0, 255, 0)
+yellow = (255, 255, 0)
+blue = (0, 0, 255)
+red = (255, 0, 0)
+white = (255,255,255)
+nothing = (0,0,0)
+pink = (255,105, 180)
+
+def trinket_logo():
+    G = green
+    Y = yellow
+    B = blue
+    O = nothing
+    logo = [
+    O, O, O, O, O, O, O, O,
+    B, B, B, B, B, O, O, O,
+    B, O, O, O, O, O, O, O,
+    B, O, O, O, O, O, O, O,
+    B, B, B, O, O, O, O, O,
+    B, O, O, O, O, O, O, O,
+    B, O, O, O, O, O, O, O,
+    B, O, O, O, O, O, O, O,
+    ]
+    return logo
+
+def raspi_logo():
+    G = green
+    R = red
+    O = nothing
+    B = blue
+    logo = [
+    O, O, O, O, O, O, O, O, 
+    O, B, B, B, B, B, O, O, 
+    O, B, O, O, O, O, O, O, 
+    O, B, O, O, O, O, O, O, 
+    O, B, B, B, O, O, O, O, 
+    O, B, O, O, O, O, O, O, 
+    O, B, O, O, O, O, O, O, 
+    O, B, O, O, O, O, O, O,
+    ]
+    return logo
+
+def plus():
+    W = white
+    O = nothing
+    G = green
+    B = blue
+    logo = [
+    O, O, O, O, O, O, O, O, 
+    O, O, B, B, B, B, B, O, 
+    O, O, B, O, O, O, O, O, 
+    G, O, B, O, O, O, O, O, 
+    G, O, B, B, B, O, O, O, 
+    G, O, B, O, O, O, O, O, 
+    G, O, B, O, O, O, O, O, 
+    G, O, B, O, O, O, O, O,
+    ]
+    return logo
+
+def equals():
+    W = white
+    O = nothing
+    G = green
+    B = blue
+    logo = [
+    O, O, O, O, O, O, O, O,
+    G, O, O, B, B, B, B, O ,
+    O, G, O, B, O, O, O,  O,
+    O, G, O, B, O, O, O,  O,
+    G, G, O, B, B, B, O,  O,
+    O, G, O, B, O, O, O,  O,
+    O, G, O, B, O, O, O,  O,
+    O, G, O, B, O, O, O, O,
+    ]
+    return logo
+
+def heart():
+    P = pink
+    B = blue
+    G= green
+    O = nothing
+    logo = [
+    O, O, O, O, O, O, O, O,
+    O, G, O, O, B, B, B, O, 
+    G, O, G, O, B, O, O,  O,
+    G, O, G, O, B, O, O,  O,
+    G, G, G, O, B, B, B,  O,
+    G, O, G, O, B, O, O,  O,
+    G, O, G, O, B, O, O,  O,
+    G, O, G, O, B, O, O, O,
+    ]
+    return logo
+
+images = [trinket_logo, raspi_logo, plus, equals, heart]
+count = 0
+
+while True: 
+    #s.set_pixels(images[count % len(images)]())
+    temp = s.get_temperature()
+    print("Temperature: %s C" % temp)
+    #s.show_message("%s" % temp)
+    if temp > 50
+        s.show_message("%s" % temp)
+        text_colour=[255, 0, 0])
+    else if
+    time.sleep(.25)
+    count += 1
+    
