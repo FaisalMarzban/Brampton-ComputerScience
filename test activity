@@ -1,0 +1,60 @@
+ Sub Main()
+        Console.WriteLine("Guessing game with two random people randomly") 'dvcgfscdgszvcghd
+        Console.WriteLine("made by Faisal         07/12/17")       'sgcvghvsdfhcgvaszvc
+        Console.ReadLine()                                          'dfvgyahegnbzcfvtysd
+
+        Dim array(0 To 3) As String
+        Dim num As Integer
+        Dim guess As Integer
+        Dim gnum As Integer
+        Dim counter1 As Integer
+
+
+        counter1 = 0
+
+
+        For i = 1 To 4
+            Console.WriteLine("enter name of four teams")
+            array(i - 1) = Console.ReadLine()
+        Next
+
+        For i = 1 To 4
+            Console.WriteLine("Team: " & array(i - 1))
+            Console.ReadLine()
+        Next
+
+        Randomize()
+        num = (Rnd() * 4) - 1
+
+
+
+        For i = 1 To 2
+            Do
+                Randomize()
+                num = (Rnd() * 4) - 1
+
+
+
+                Randomize()
+                gnum = (Rnd() * 10) - 1
+                Console.WriteLine("team: " & array(num) & " enter a guess between 1 - 10")
+
+                guess = Console.ReadLine()
+                If guess = gnum Then
+                    Console.WriteLine("correct")
+                    'Console.ReadLine()
+                Else
+                    Console.WriteLine("try again")
+                    'Console.ReadLine()
+                End If
+                counter1 = counter1 + 1
+            Loop Until guess = gnum
+            Console.WriteLine(counter1 & " guesses")
+            Console.ReadLine()
+            counter1 = 0
+        Next
+
+
+
+
+    End Sub
