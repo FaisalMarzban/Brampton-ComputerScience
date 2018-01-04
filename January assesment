@@ -1,0 +1,69 @@
+Console.WriteLine("Pizza ordering program")         'Pizza ordering program
+        Console.WriteLine("by Faisal Marzban, 04/01/2018")  'Faisal Marzban, 04/01/2018
+        Console.ReadLine()
+
+        Dim choice As String
+        Dim again As String
+        Dim topcount As Integer
+        Dim index As Integer
+        Dim shopopen As Boolean
+        Dim endorder As Boolean
+        Dim thinpan As String
+        Dim n As Integer
+        Dim tnum As Integer
+        n = 10
+        Dim rstr As Integer
+
+        choice = ""
+        again = ""
+        topcount = 0
+        index = 0
+        shopopen = True
+        endorder = False
+
+        Dim toppings(0 To 10, 0 To 10) As String
+
+        For i = 1 To 10
+            toppings(0, i) = 10
+        Next
+
+        toppings(1, 0) = "cheese"
+        toppings(2, 0) = "ham"
+        toppings(3, 0) = "pepperoni"
+        toppings(4, 0) = "pineapple"
+        toppings(5, 0) = "mushroom"
+        toppings(6, 0) = "cherry tomatoes"
+        toppings(7, 0) = "chicken"
+        toppings(8, 0) = "peppers"
+        toppings(9, 0) = "olives"
+        toppings(10, 0) = "jalepenos"
+
+
+        For i = 1 To 10
+            Console.WriteLine(i & " " & toppings(i, 0) & " " & ":" & " " & toppings(0, i))
+        Next
+        Console.ReadLine()
+
+        'level 4 left out no idea how to do it
+        Do
+            Console.WriteLine("Do you want your pizza (T)hin or (P)an?")
+            thinpan = Console.ReadLine()
+        Loop Until thinpan = "T" Or "t" Or "P" Or "p"
+        Do
+            Do
+                Console.WriteLine("enter a topping that you want with the number in front of it, within the range Or enter x to close stop adding toppings")
+                n = Console.ReadLine()
+                If n = "x" Or "X" Then
+                    endorder = False
+                End If
+
+                If toppings(0, n) <= 0 Then
+                    Console.WriteLine("no more left of" & toppings(n, 0) & "pick another")
+                    Console.WriteLine()
+                End If
+            Loop Until 0 < n <= 10
+
+            rstr = Val(toppings(0, n))
+            rstr = rstr - 1
+            toppings(0, n) = rstr
+        Loop Until tnum = 0 Or endorder = False
